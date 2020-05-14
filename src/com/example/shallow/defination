@@ -1,0 +1,22 @@
+Shallow copy is nothing but default clone implementation where it create new instance and
+copy all the field of object to the new instance and returns the Object type.
+Object is created that has an exact copy of the values in the original object.
+If any of the fields of the object are references to other objects,
+it holds just the address reference of the other Objects rather copying complete instance is called Shallow copy.
+
+Explicitly we need to type cast to our class as given in below example.
+Basically if a class need to support cloning then we need to implement Cloneable interface and
+need to Override clone method also.
+
+Now all we know that clone will be Shallow or Deep copy to create a new copy of the class object.
+Here interviewer will interrupt and put a question like when we clone object whether Class constructor will be called or
+not? Suddenly our ears will open widely and start thinking. Answer will be NO,
+while cloning any class object constructor will not be called.
+
+===========================================
+Deep copy - by name itself we can identify as its copy complete Object in-depth while cloning any instance.
+In Shallow copy we have seen that Object which holds another Object will not be copied and only holds the address reference.
+Where as in Deep copy it copies those Objects also and creates the instance for those Objects.
+Apart from this difference Deep copy is same as Shallow copy like, explicitly we need to type cast to our class
+and Constructors will not be called in our cloning class, but Object which contains other Object class constructors
+ will be called while cloning from clone() method instance creation.
